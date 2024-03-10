@@ -1,0 +1,12 @@
+.todo-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.todo-item {
+  border: 1px solid #e34432;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  list-style: none;
+}

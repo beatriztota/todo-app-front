@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { criarToDo } from "../apis/Apis";
 import { format } from "date-fns";
+import { CreateToDo } from "../apis/TodoModel";
+import "./TodoForm.css"
 
 const TodoForm = () => {
   const [description, setDescription] = useState("");
@@ -11,11 +13,9 @@ const TodoForm = () => {
     try {
       console.log("enviando dados para a API");
 
-      const dataToBeSent = {
-        description,
-        title,
-      };
-      const response = await criarToDo(dataToBeSent);
+      const createToDo = new CreateToDo(title, description);
+
+      const response = await criarToDo(createToDo);
     } catch (error) {
       console.error("Erro ao criar ToDo:", error.message);
     }
@@ -43,7 +43,7 @@ const TodoForm = () => {
             required
           />
         </label>
-        <button type="submit">Enviar</button>
+        <button type="submit">Criar</button>
       </form>
     </>
   );
