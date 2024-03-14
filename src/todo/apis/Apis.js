@@ -40,7 +40,13 @@ const getToDo = async () => {
 
     const data = await response.json();
 
-    // Assuming data is an array, you can map it to create ToDo instances
+    if (!data || !data.data) {
+      console.error("Data is null or undefined");
+      return [];
+    }
+
+    console.log("Response data:", data);
+
     const toDos = data.data.map(
       (todoData) =>
         new ToDo(
@@ -64,4 +70,41 @@ const getToDo = async () => {
   }
 };
 
-export { criarToDo, getToDo };
+const editarToDo = async (id, updatedToDo) => {
+  try {
+    const response = await fetch(`${apiUrl}/todo/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedToDo),
+    });
+
+    if (!response.ok) {
+      throw new Error("Erro ao editar ToDo");
+    }
+
+    console.log(await response.json());
+  } catch (error) {
+    console.error("Erro ao chamar a API para edição:", error.message);
+  }
+};
+
+const deletarToDo = async (id) => {
+  try {
+    const response = await fetch(`${apiUrl}/todo/${id}`, {
+      method: "DELETE",
+    });
+
+    if (!response.ok) {
+      throw new Error("Erro ao deletar ToDo");
+    }
+
+    console.log("ToDo deletado com sucesso");
+  } catch (error) {
+    console.error("Erro ao chamar a API para exclusão:", error.message);
+  }
+};
+
+export { criarToDo, getToDo, editarToDo, deletarToDo };
+

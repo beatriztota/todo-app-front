@@ -1,12 +1,37 @@
 .todo-container {
-  max-width: 600px;
-  margin: 0 auto;
+  margin: 20px;
 }
 
 .todo-item {
-  border: 1px solid #e34432;
-  border-radius: 8px;
+  background-color: #f0f0f0;
   padding: 10px;
   margin-bottom: 10px;
-  list-style: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.icon-container {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  margin-top: 10px;
+  color: #e34432;
+}
+
+.icon {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #e34432;
+  margin: 0 5px;
+}
+
+.icon:hover {
+  color: #555;
+}
+
+input:focus {
+  outline: 0;
 }

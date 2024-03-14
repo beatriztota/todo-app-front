@@ -1,23 +1,29 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { criarToDo } from "../apis/Apis";
-import { format } from "date-fns";
 import { CreateToDo } from "../apis/TodoModel";
-import "./TodoForm.css"
+import "./TodoForm.css";
+import { toast } from "react-toastify";
 
 const TodoForm = () => {
   const [description, setDescription] = useState("");
   const [title, setTitle] = useState("");
+  const navigate = useNavigate();
 
   const handleCriarToDo = async (e) => {
     e.preventDefault();
     try {
-      console.log("enviando dados para a API");
+      console.log("Enviando dados para a API");
 
       const createToDo = new CreateToDo(title, description);
 
       const response = await criarToDo(createToDo);
+
+      navigate("/");
+      toast.success("ToDo criada com sucesso!");
     } catch (error) {
       console.error("Erro ao criar ToDo:", error.message);
+      toast.error("Erro ao criar ToDo");
     }
   };
 
@@ -43,7 +49,7 @@ const TodoForm = () => {
             required
           />
         </label>
-        <button type="submit">Criar</button>
+        <input className="btn" type="submit" value="Enviar" />
       </form>
     </>
   );
