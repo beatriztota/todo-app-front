@@ -1,0 +1,104 @@
+/* Global Styles */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Login Container Styles */
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center; /* Centraliza o texto dentro do container */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+}
+
+.login-container h2 {
+    color: #6d6875;
+    margin-bottom: 20px; /* Espaçamento inferior para o título */
+}
+
+.login-container form {
+    width: 100%; /* Garante que o formulário ocupe toda a largura do container */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens horizontalmente dentro do formulário */
+}
+
+.login-container .fieldset {
+    width: 100%; 
+    margin-bottom: 10px;
+}
+
+/* Label Styles */
+.login-container label {
+    width: 100%; /* Garante que o label ocupe toda a largura do fieldset */
+    text-align: left; /* Alinha o texto do label à esquerda */
+    color: #6d6875;
+    margin-bottom: 5px;
+}
+
+/* Input Styles */
+.login-container input {
+    width: calc(100% - 16px); /* Garante que o input ocupe toda a largura do fieldset */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Submit Button Styles */
+.login-container button[type="submit"] {
+    width: 60%;
+    padding: 10px;
+    background-color: #f67280;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px; /* Espaçamento inferior para o botão */
+}
+
+.login-container button[type="submit"]:hover {
+    background-color: #ff7b8a;
+}
+
+/* Message Styles */
+.login-container .error {
+    color: #f00;
+    margin-bottom: 10px; /* Espaçamento inferior para a mensagem */
+}
+
+.login-container .success {
+    color: #008000;
+    margin-bottom: 10px; /* Espaçamento inferior para a mensagem */
+}
+
+/* Register Button Styles */
+.registro-button {
+    color: #f67280;
+    border: none;
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.registro-button:hover {
+    color: #ff7b8a;
+}
+
+/* Paragraph Styles for Toggle Link */
+.login-container p {
+    margin-top: 20px; /* Espaçamento superior para o parágrafo */
+}

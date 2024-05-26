@@ -3,7 +3,7 @@ import TodoList from "./TodoList"
 
 const Home = () => {
   return (
-    <div className="todo-container">
+    <div>
       <p></p>
       <TodoList/>
     </div>

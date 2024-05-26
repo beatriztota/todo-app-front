@@ -1,37 +1,194 @@
+/* Global Styles */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .todo-container {
-  margin: 20px;
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.todo-container h1 {
+    color: #6d6875;
+    margin-bottom: 20px;
+}
+
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .todo-item {
-  background-color: #f0f0f0;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: relative;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.todo-item h3 {
+    margin: 0 0 5px;
+    color: #6d6875;
+    font-size: 20px;
+
+}
+
+.todo-item p {
+    margin: 5px 0 10px;
+    color: #888;
 }
 
 .icon-container {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  margin-top: 10px;
-  color: #e34432;
+    display: flex;
+    gap: 20px; 
+    align-items: center; 
+}
+
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .icon {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  color: #e34432;
-  margin: 0 5px;
+    margin-right: 6px;
+    color: #f67280;
+    font-size: 15px;
+    transition: color 0.3s ease;
 }
 
-.icon:hover {
-  color: #555;
+.icon-button:hover .icon {
+    color: #ff7b8a;
 }
 
-input:focus {
-  outline: 0;
+/* Pagination Styles */
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
+
+.pagination button {
+    padding: 10px 20px;
+    background-color: #f67280;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #ff7b8a;
+}
+
+.edit-fields {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.edit-fields label {
+    color: #6d6875;
+    margin-bottom: 5px;
+}
+
+.edit-fields input,
+.edit-fields textarea {
+    width: calc(100% - 16px);
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.edit-fields button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f67280;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-fields button:hover {
+    background-color: #ff7b8a;
+}
+
+h4 {
+    color: #6d6875;
+}
+
+.home-container {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.welcome-section {
+    margin-bottom: 20px;
+}
+
+.welcome-section h1 {
+    color: #6d6875;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.welcome-section p {
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.action-section {
+    margin-bottom: 20px;
+}
+
+.create-task-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 150px; 
+    background-color: #f67280;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+
+}
+
+.create-task-button:hover {
+    background-color: #ff7b8a;
+}
+
+.icon {
+    margin-right: 6px;
+}
+
+
+
+
+
+

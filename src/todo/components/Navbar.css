@@ -1,32 +1,75 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .navbar {
-  background-color: #fefdfc;
-  padding: 10px;
-  text-align: center;
-  color: #ecf0f1;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-}
+    background-color: #f9ece9; 
+    color: #6d6875; 
+    padding: 10px 20px; 
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-size: 24px;
+    text-decoration: none;
+    color: #000; 
+  }
+  
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .login,
+  .create-todo-button {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #25221ecc;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .login:hover,
+  .create-todo-button:hover {
+    color: #f67280; 
+  }
+  
+  .create-todo-button {
+    background-color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #25221ecc;
+    border: 2px solid #fff; 
+    border-radius: 20px; 
+    padding: 8px 16px; 
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .create-todo-button:hover {
+    color: #f67280; 
+  }
 
-.navbar h2 {
-  margin: 0;
-  font-size: 1.5em;
-  text-decoration: none;
-  color: #e34432;
-  margin-left: 20px;
-}
-.navbar button {
-  background-color: #e34432;
-  color: #fff;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  margin-left: 30px;
-}
-
-.navbar button:hover {
-  background-color: #ff6252;
-}
+  .login {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #25221ecc;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    border-left: 1px solid #25221ecc; 
+    padding-left: 10px; 
+  }
+  
+  
