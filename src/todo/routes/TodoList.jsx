@@ -48,6 +48,7 @@ const ToDoList = () => {
         const pending = toDos.filter(todo => !todo.completed).length;
         setPendingTasks(pending);
     };
+    
 
     const handleNextPage = () => {
         setCurrentPage(prevPage => prevPage + 1);
@@ -73,26 +74,26 @@ const ToDoList = () => {
     };
 
     const handleEdit = (id, title, description, scheduledTo) => {
-        console.log("Editando Todo:", id);
+        console.log("Editing Todo:", id);
         setEditingTodo(id);
         setEditTitle(title);
         setEditDescription(description);
         setEditScheduledTo(scheduledTo);
-        console.log("Editando título:", title);
-        console.log("Editando descrição:", description);
-        console.log("Agendado para:", scheduledTo);
+        console.log("Edit Title:", title);
+        console.log("Edit Description:", description);
+        console.log("Scheduled To:", scheduledTo);
     };
     
     const handleSaveEdit = async (id) => {
-        console.log("Salvando a edição da todo:", id);
-        console.log("Editando título", editTitle);
-        console.log("Editando descrição:", editDescription);
-        console.log("Editando agendado para:", editScheduledTo);
+        console.log("Saving Edit for Todo:", id);
+        console.log("Edit Title:", editTitle);
+        console.log("Edit Description:", editDescription);
+        console.log("Edit Scheduled To:", editScheduledTo);
         try {
             let formattedDate = null;
             if (editScheduledTo) {
                 const dateObject = new Date(editScheduledTo);
-                formattedDate = dateObject.toISOString();
+                formattedDate = dateObject.toISOString(); // Formatar a data para o formato ISO (YYYY-MM-DDTHH:mm:ss.sssZ)
             }
     
             const updatedTodo = { 
@@ -118,6 +119,7 @@ const ToDoList = () => {
             toast.error("Erro ao editar a tarefa");
         }
     };
+    
 
     const handleTaskCompletion = async (id) => {
         try {
@@ -200,16 +202,12 @@ const ToDoList = () => {
                 ))}
             </ul>
             <div className="pagination">
-                {currentPage > 1 && (
-                    <button onClick={handlePreviousPage}>
-                        Anterior
-                    </button>
-                )}
-                {currentPage < totalPages && (
-                    <button onClick={handleNextPage}>
-                        Próxima
-                    </button>
-                )}
+                <button disabled={currentPage === 1} onClick={handlePreviousPage}>
+                    Anterior
+                </button>
+                <button onClick={handleNextPage}>
+                    Próxima
+                </button>
             </div>
         </div>
     );
