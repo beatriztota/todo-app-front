@@ -1,75 +1,74 @@
-* {
-    font-family: Arial, Helvetica, sans-serif;
-}
+*{
+    font-family: "Be Vietnam Pro", sans-serif;
+  }
+
 
 .navbar {
-    background-color: #f9ece9; 
-    color: #6d6875; 
-    padding: 10px 20px; 
-  }
-  
-  .container {
+    color: #333; 
+    padding: 15px 30px;
+}
+
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .logo {
-    font-size: 24px;
-    text-decoration: none;
-    color: #000; 
-  }
-  
-  
-  .nav-links {
+}
+
+.nav-links {
     display: flex;
     align-items: center;
-  }
-  
-  .login,
-  .create-todo-button {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #25221ecc;
-    border: none;
-    background: none;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .login:hover,
-  .create-todo-button:hover {
-    color: #f67280; 
-  }
-  
-  .create-todo-button {
-    background-color: #fff;
-    margin-left: 20px;
-    text-decoration: none;
-    color: #25221ecc;
-    border: 2px solid #fff; 
-    border-radius: 20px; 
-    padding: 8px 16px; 
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .create-todo-button:hover {
-    color: #f67280; 
-  }
+}
 
-  .login {
-    margin-left: 20px;
+.login,
+.create-todo-button {
     text-decoration: none;
-    color: #25221ecc;
+    color: #333; 
     border: none;
     background: none;
     cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    padding: 0 10px;
+}
+
+.login:hover {
+    color: #007bff; 
+}
+
+
+
+.create-todo-button {
+    color: white;
+    background-color: #007bff; 
+    border-radius: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.create-todo-button:hover {
+    background-color: #0056b3; 
+}
+
+.logo {
+    font-size: 1.8em;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    align-items: center; 
     transition: color 0.3s ease;
-    border-left: 1px solid #25221ecc; 
-    padding-left: 10px; 
-  }
-  
-  
+}
+
+.icon {
+    margin-right: 10px; 
+}
+
+.logo:hover {
+    color: #007bff; 
+}
+
+.nav-links {
+    margin-left: auto;
+}

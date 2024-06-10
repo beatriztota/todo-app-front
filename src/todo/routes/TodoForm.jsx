@@ -15,26 +15,25 @@ const TodoForm = () => {
         try {
             console.log("Enviando dados para a API");
     
-            // Definir a propriedade scheduled com base em scheduledTo
             const scheduled = !!scheduledTo;
     
             let formattedDate = null;
             if (scheduledTo) {
                 const dateObject = new Date(scheduledTo);
-                formattedDate = dateObject.toISOString(); // Formatar a data para o formato ISO (YYYY-MM-DDTHH:mm:ss.sssZ)
+                formattedDate = dateObject.toISOString(); 
             }
     
             const todoData = {
                 title,
                 description,
                 scheduled,
-                scheduled_to: formattedDate // Definir scheduled_to apenas se a tarefa estiver agendada
+                scheduled_to: formattedDate 
             };
     
             const response = await createTodo(todoData);
     
             if (response) {
-                navigate("/");
+                navigate("/todo"); 
                 toast.success("ToDo criada com sucesso!");
             } else {
                 toast.error("Erro ao criar ToDo");

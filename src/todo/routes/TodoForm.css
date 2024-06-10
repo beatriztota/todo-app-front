@@ -1,60 +1,60 @@
-/* TodoForm Styles */
+*{
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
 .form-container {
-    max-width: 400px;
-    margin: 0 auto;
-    margin-top: 100px;
-    padding: 30px;
-    border: 1px solid #ddd;
+    max-width: 500px;
+    margin: 5rem auto;
+    padding: 40px;
+    background-color: #f9f9f9;
     border-radius: 10px;
-    background-color: #fff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.form-container h2 {
-    color: #6d6875;
+  }
+  
+  .form-container h2 {
+    font-size: 28px;
     margin-bottom: 20px;
-}
-
-.form-container form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.form-container label {
-    width: 100%;
-    text-align: left;
-    color: #6d6875;
-    margin-bottom: 5px;
-}
-
-.form-container input[type="text"],
-.form-container input[type="checkbox"],
-.form-container input[type="datetime-local"] {
-    width: calc(100% - 16px);
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    color: #333;
+  }
+  
+  .form-container form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
     margin-bottom: 10px;
-}
-
-.form-container input[type="submit"] {
-    width: 60%;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="datetime-local"],
+  input[type="submit"] {
+    width: calc(100% - 22px); 
     padding: 10px;
-    background-color: #f67280;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; 
+  }
+  
+  input[type="text"]:focus,
+  input[type="datetime-local"]:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  input[type="submit"] {
+    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-bottom: 10px;
-}
-
-.form-container input[type="submit"]:hover {
-    background-color: #ff7b8a;
-}
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  

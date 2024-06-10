@@ -1,0 +1,277 @@
+*{
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+
+.home-container-home {
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-section-home {
+  text-align: center;
+  margin-bottom: 80px;
+  margin-top: 100px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  padding: 60px 20px;
+  border-radius: 10px;
+}
+
+.hero-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #fff;
+  color: #007bff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.feature-section {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 120px;
+  margin-top: 120px;
+}
+
+.feature {
+  flex: 1;
+  margin: 0 10px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+}
+
+.feature h2 {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.feature p {
+  font-size: 16px;
+  color: #666;
+}
+
+.testimonials-section {
+  margin: 100px auto; 
+  max-width: 90%;
+  background-color: #f0f0f0;
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+.testimonials-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+}
+
+.testimonial {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-10px);
+}
+
+.testimonial p {
+  font-size: 16px;
+  color: #666;
+}
+
+.faq-section {
+  margin: 100px auto; 
+  max-width: 90%;
+  background-color: #e9f7fe;
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+.faq-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+}
+
+.faq {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.faq:hover {
+  transform: translateY(-10px);
+}
+
+.faq-icon {
+  font-size: 24px;
+  color: #007bff;
+  margin-right: 20px;
+}
+
+.faq h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.faq p {
+  margin-left: 10px;
+  font-size: 16px;
+  color: #666;
+}
+
+.blog-section {
+  margin: 100px auto; 
+  max-width: 90%;
+  background-color: #fff3e0;
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+.blog-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: left;
+}
+
+.blog-post {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.blog-post:hover {
+  transform: translateY(-10px);
+}
+
+.blog-icon {
+  font-size: 24px;
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  color: #333; 
+  padding: 50px 0;
+  width: 100%;
+  margin-top: 100px; 
+  margin-bottom: 0px;
+}
+
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-info,
+.footer-links,
+.footer-social {
+  margin: 20px;
+  flex: 1;
+}
+
+.footer-links ul,
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li,
+.footer-social ul li {
+  margin: 10px 0;
+}
+
+.footer-links ul li a,
+.footer-social ul li a {
+  color: #333; 
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover,
+.footer-social ul li a:hover {
+  color: #007bff;
+}
+
+.footer-social h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.footer-social ul li {
+  margin: 0; 
+}
+
+.footer-social ul li a img {
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%;
+  box-shadow: none; 
+  transition: transform 0.3s ease;
+}
+
+.footer-social ul li a img:hover {
+  transform: none; 
+}
